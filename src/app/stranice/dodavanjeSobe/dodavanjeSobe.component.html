@@ -1,0 +1,73 @@
+<div class="container-fluid naslov">
+  Met Hotel 
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light  navigation">
+   <a class="nav-link"  routerLink='../pocetna'>Početna</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav">
+       <li class="nav-item ">
+         <a class="nav-link"  routerLink="../sobe">Sobe <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link"  routerLink="../pretraga">Pretraga soba</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link"  routerLink="../kontakt">Kontakt</a>
+       </li>
+       <li class="nav-item">
+        <a class="navbar-brand  active ac"  routerLink="../dodavanjeSobe">Dodavanje sobe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="../registracija">Registracija</a>
+      </li>
+     </ul>
+   </div>
+ </nav> 
+
+
+
+ <div class="container-fluid podnaslov">
+
+  <p> Dodavanje sobe </p>
+
+ </div>
+
+
+ <div class="container-fluid col-md-8 offset-md-2 mt-3">
+
+ <form role="form" [formGroup]="dodavanjeSobeForm">
+  <div class="form-group">
+     <label for="broj">Broj:</label>
+     <input type="number" class="form-control" formControlName='broj'>
+   </div>
+    <div class="form-group">
+     <label for="naziv">Naziv:</label>
+     <input type="text" class="form-control"  formControlName='naziv'>
+   </div>
+   <div class="form-group">
+     <label for="tv">TV:</label>
+     <select class="form-control" ng-selected="Da" formControlName='tv'>
+      <option value="1" >Da</option>
+      <option value="0" >Ne</option>
+     </select>
+   </div>
+   <div class="form-group">
+     <label for="kvadrati">Kvadrati:</label>
+     <input type="number" class="form-control" formControlName='kvadrati'>
+   </div>
+   <div class="form-group">
+    <label for="kreveti">Kreveti:</label>
+    <input type="number" class="form-control" formControlName='kreveti'>
+  </div>
+   <button (click)="dodajSobu()" class="btn btn-default">Dodaj</button>
+ </form>
+
+</div>
+
+ <div class="container-fluid footer">
+  <p>&copy; Copyright 2018&reg;</p>
+ </div>
